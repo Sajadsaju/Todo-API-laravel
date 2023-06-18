@@ -20,6 +20,7 @@ $router->get('/', function () use ($router) {
 $router->get('/hellow','Controller@hellow');
 $router->post('/createTask','UserController@createTask');
 $router->post('/updateTask/{id}','UserController@UpdateTask');
-
+$router->post('/delete/{id}','UserController@DeleteTask');
+$router->get('/view','UserController@view');
 
 
