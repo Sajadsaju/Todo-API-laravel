@@ -58,6 +58,9 @@ class UserController extends Controller
 
         return response()->json(['message' => 'Task delete successfully'], 201);
     }
+    public function hellow(){
+        return 'hellow';
+    }
     public function  view(){
 
 

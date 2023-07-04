@@ -13,6 +13,20 @@
 |
 */
 
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+
+// Add the following code to enable CORS
+header('Access-Control-Allow-Origin: http://localhost:3000');
+header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
+header('Access-Control-Allow-Headers: Content-Type');
+
+$router->get('/', function () use ($router) {
+    return $router->app->version();
+});
+
+
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
